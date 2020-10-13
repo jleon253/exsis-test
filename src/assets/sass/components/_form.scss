@@ -1,0 +1,22 @@
+.myForm{
+  label{
+    color: $c-txt;
+    &::after{
+      content: ':';
+    }
+  }
+  input, select{
+    color: black;
+    border-radius: 0px;
+    &::placeholder{
+      color: transparentize($c-txt, 0.4);
+      font-style: italic;
+    }
+  }
+  .form-control{
+    &:focus{
+      border: 2px solid $c-secondary_dark;
+      box-shadow: none;
+    }
+  }
+}
