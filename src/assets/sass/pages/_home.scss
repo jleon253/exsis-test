@@ -1,0 +1,24 @@
+.myContainer{
+  .myBlock{
+    background-color: transparent;
+    @include media('tablet'){
+      background-color: $c-w;
+      width: 90%;
+      display: block;
+      margin: 0px auto;
+      padding: 20px 40px;
+      @include shadow(2);
+    }
+    @include media('desktop'){
+      width: 70%;
+      padding: 20px 30px;
+      @include shadow(2);
+    }
+    .title{
+      color: $c-primary;
+    }
+    .subtitle{
+      color: $c-txt;
+    }
+  }
+}

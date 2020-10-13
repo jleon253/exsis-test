@@ -1,4 +1,10 @@
 .myForm{
+  width: 95%;
+  display: block;
+  margin: 0px auto;
+  @include media('small'){
+    width: 100%;
+  }
   label{
     color: $c-txt;
     &::after{
