@@ -3,7 +3,24 @@
     <div class="col-12 text-center myHeader">
       <i class="fas fa-5x fa-check-circle myIcon-check"></i>
       <h1 class="title">Felicitaciones</h1>
-      <h5 class="subtitle">¡Sus datos han sido enviados!</h5>
+      <h5 class="subtitle">¡La cotización de su vehiculo ha sido enviado!</h5>
+      <table class="table my-4" *ngIf="brand.length > 0">
+        <tbody>
+          <tr>
+            <td><b>Marca</b></td>
+            <td>{{ brand }}</td>
+          </tr>
+          <tr>
+            <td><b>Modelo</b></td>
+            <td>{{ model }}</td>
+          </tr>
+          <tr>
+            <td><b>Año</b></td>
+            <td>{{ year }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-center text-muted" *ngIf="email.length > 0">Al email: {{ email}}</p>
     </div>
     <div class="col-12 my-4 text-center">
       <a routerLink="'/home'" class="myLink">Volver a Incio</a>
