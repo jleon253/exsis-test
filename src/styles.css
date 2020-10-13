@@ -75,6 +75,12 @@ button.btn {
   }
 }
 
+@media (min-width: 992px) {
+  .myNavbar {
+    padding: 0px 20%;
+  }
+}
+
 .myForm {
   width: 95%;
   display: block;
@@ -140,6 +146,10 @@ body {
 }
 .myContainer .myBlock .subtitle {
   color: #888888;
+}
+
+.myIcon-check {
+  color: #BBD550;
 }
 
 /*# sourceMappingURL=styles.css.map */
