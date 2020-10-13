@@ -1,0 +1,28 @@
+//  ██████╗.██████╗.███████╗.█████╗.██╗..██╗██████╗..██████╗.██╗███╗...██╗████████╗███████╗
+//  ██╔══██╗██╔══██╗██╔════╝██╔══██╗██║.██╔╝██╔══██╗██╔═══██╗██║████╗..██║╚══██╔══╝██╔════╝
+//  ██████╔╝██████╔╝█████╗..███████║█████╔╝.██████╔╝██║...██║██║██╔██╗.██║...██║...███████╗
+//  ██╔══██╗██╔══██╗██╔══╝..██╔══██║██╔═██╗.██╔═══╝.██║...██║██║██║╚██╗██║...██║...╚════██║
+//  ██████╔╝██║..██║███████╗██║..██║██║..██╗██║.....╚██████╔╝██║██║.╚████║...██║...███████║
+//  ╚═════╝.╚═╝..╚═╝╚══════╝╚═╝..╚═╝╚═╝..╚═╝╚═╝......╚═════╝.╚═╝╚═╝..╚═══╝...╚═╝...╚══════╝
+//  .......................................................................................
+
+$breakpoints: (
+  'small': (min-width: 576px), // Small tablets and large smartphones (landscape view)
+  'tablet': (min-width: 768px), // Small tablets (portrait view)
+  'desktop': (min-width: 992px), // Tablets and small desktops
+  'medium': (min-width: 1024px), // Screen medium
+  'large': (min-width: 1200px), // Large tablets and desktops
+  'x-large': (min-width: 1440px), // Screen extra large
+  'portrait': (orientation: portrait), // Vertical
+  'landscape': (orientation: landscape), // Horizontal
+) !default;
+
+@mixin media($breakpoint){
+  @if map-has-key($breakpoints, $breakpoint){
+    @media #{inspect(map-get($breakpoints, $breakpoint))}{
+      @content;
+    }
+  } @else{
+    @warn "Value `#{$breakpoint}` couldn't be recognized. Breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

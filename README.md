@@ -1,5 +1,18 @@
 # ExsisTest
 
+Tests para puesto de Maquetador en EXSIS
+
+### Puntos reueltos de la prueba
+
+> - Maquetación
+> - Requerimientos: Se usó HTML5 , CSS3, Bootstrap 4.5 y FontAwesome 6
+> - JavaScript: Se utiliza Framework Angular 9 (Validaciones con FormsModule)
+> - Thankyou Page: Agregada en ruta /thankyou y se muestra al hacer submit en el formulario
+> - SEO: Se agregan meta tags y keywords en el archivo HTML
+> - Advanced CSS: Se usa el preprocesador SASS
+> - Habilidades UX: 1) Sugiero que no solo se usen diseños en photoshop, sino que se avance en el uso de herramientas online que permitan realizar prototipos, ya que con un diseño plano no se visualizan todas las interacciones del usuario. 2) tener en cuenta todos los estados de los componentes para así ser más efectivo al momento de maquetar. 3) Mejorar y agregar los mensajes de respuesta al usuario en cualquier momento, eso no esta en el diseño. 4) Demostración de animaciones, en un archivo .psd es imposible saber esto.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
 ## Development server

@@ -1,0 +1,5 @@
+.myNavbar{
+  @include media('desktop'){
+    padding: 0px 20%;
+  }
+}

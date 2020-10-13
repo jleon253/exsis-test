@@ -1,0 +1,27 @@
+//  ███╗...███╗██╗██╗..██╗██╗███╗...██╗███████╗
+//  ████╗.████║██║╚██╗██╔╝██║████╗..██║██╔════╝
+//  ██╔████╔██║██║.╚███╔╝.██║██╔██╗.██║███████╗
+//  ██║╚██╔╝██║██║.██╔██╗.██║██║╚██╗██║╚════██║
+//  ██║.╚═╝.██║██║██╔╝.██╗██║██║.╚████║███████║
+//  ╚═╝.....╚═╝╚═╝╚═╝..╚═╝╚═╝╚═╝..╚═══╝╚══════╝
+//  ...........................................
+
+// Button
+
+@mixin  myButton() {
+  border: none;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+//------ Shadows --------
+
+@mixin shadow($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `shadow`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);
+  }
+}
